@@ -5,6 +5,8 @@ export default defineEventHandler(async (event) => {
 
   const uri = `https://api.currencyapi.com/v3/currencies?apikey=${currencyKey}&currencies=${code}`;
 
+  console.log('uri :>> ', uri);
+
   const {data} = await $fetch(uri);
 
   return data;
