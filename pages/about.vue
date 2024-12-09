@@ -12,15 +12,14 @@
     <div>
       {{ data }}
     </div>
+    <div>{{ config }}</div>
   </div>
 </template>
 
 <script setup>
+const { data } = await useFetch("/api/currency/EUR");
 
-  const {data} = await useFetch('/api/currency/EUR');
-
-
-
+const config = useRuntimeConfig();
 </script>
 
 <style lang="scss" scoped>
